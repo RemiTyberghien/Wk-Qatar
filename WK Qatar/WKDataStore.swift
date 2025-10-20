@@ -9,4 +9,17 @@ import Foundation
 
 
 @Observable
-
+class  WKDataStore {
+    
+    
+    var result : [WKResult]
+    
+    init(){
+        result = load("WKResultsQatar.json")
+    }
+    
+    func landenZoeken() -> [String]
+    {
+        result.homeTeam
+    }
+}

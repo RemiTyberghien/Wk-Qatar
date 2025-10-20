@@ -10,6 +10,7 @@ import Foundation
 //JSON https://fixturedownload.com/feed/json/fifa-world-cup-2022
 
 
+
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data
 

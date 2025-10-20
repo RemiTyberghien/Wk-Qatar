@@ -8,15 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var wkDataStore = WKDataStore()
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        
+        NavigationStack
+        {
+            
         }
-        .padding()
-    }
+    }.environment(wKDataStore)
 }
 
 #Preview {
