@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var wkDataStore = WKDataStore()
+    @State private var wkDataStore = WKDataStore()
+    @State var land : String?
     var body: some View {
-        
-        NavigationStack
-        {
-            
+        NavigationStack {
+            StartView()
         }
-    }.environment(wKDataStore)
+        .environment(wkDataStore)
+    }
 }
 
 #Preview {

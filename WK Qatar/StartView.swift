@@ -8,9 +8,14 @@
 import SwiftUI
 
 struct StartView: View {
+    @Environment(WKDataStore.self) private var wkDataStore
+    @Binding var land : String?
     var body: some View {
-    
-        
+    List(wkDataStore.landenZoeken(), id: \.self, selection: $land ) { land in
+                Text(land)
+            }
+            .navigationTitle(landen)
+
         
     }
 }
