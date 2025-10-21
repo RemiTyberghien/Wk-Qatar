@@ -12,8 +12,15 @@ struct MatchesView: View {
     @Binding var land : String?
     @Binding var geselecteerdStadion: String?
     var body: some View {
-        Text("\($land)")
+
+    Grid{
+
+     GridRow
+     {
+
+     }
     }
+   }
 }
 
 

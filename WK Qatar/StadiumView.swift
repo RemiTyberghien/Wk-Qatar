@@ -15,16 +15,14 @@ struct StadiumView: View {
     var body: some View {
         
         NavigationSplitView {
-        
             List(wkDataStore.stadiumsZoeken(), id: \.self, selection: $geselecteerdStadion) { stadium in
             Text(stadium)
-        }
-        .navigationTitle("Stadions")
-        
-        
-        } detail : {
+        }content: {
             MatchesView(land: $land, geselecteerdStadion: $geselecteerdStadion)
-        }
+        } detail : {
+            DetailMatchesView()
+        }.navigationTitle("Stadions")
+
         
         
     
