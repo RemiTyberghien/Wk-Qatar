@@ -16,7 +16,7 @@ struct StadiumView: View {
         
         NavigationSplitView {
         
-        List(wkDataStore.stadiumsZoeken(), id: \.self) { stadium in
+            List(wkDataStore.stadiumsZoeken(), id: \.self, selection: $geselecteerdStadion) { stadium in
             Text(stadium)
         }
         .navigationTitle("Stadions")

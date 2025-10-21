@@ -11,6 +11,8 @@ struct ContentView: View {
     @State private var wkDataStore = WKDataStore()
     @State var land : String?
     var body: some View {
+        
+        
         NavigationStack {
             StartView(land: $land)
             
