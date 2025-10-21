@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct MatchesView: View {
+    @Environment(WKDataStore.self) private var wkDataStore
+    @Binding var land : String?
+    @Binding var geselecteerdStadion: String?
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("\($land)")
     }
 }
 
-#Preview {
-    MatchesView()
-}
+

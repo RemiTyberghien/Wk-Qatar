@@ -13,12 +13,22 @@ struct StadiumView: View {
     @State var geselecteerdStadion: String?
 
     var body: some View {
+        
+        NavigationSplitView {
+        
         List(wkDataStore.stadiumsZoeken(), id: \.self) { stadium in
             Text(stadium)
         }
         .navigationTitle("Stadions")
         
         
+        } detail : {
+            MatchesView(land: $land, geselecteerdStadion: $geselecteerdStadion)
+        }
+        
+        
+    
+
 
     }
 }

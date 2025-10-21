@@ -15,6 +15,8 @@ struct StartView: View {
         
         List(wkDataStore.landenZoeken(), id: \.self, selection: $land ) { land in
         
+            
+            
             NavigationLink(land){
                 StadiumView(land: $land)}
             }
