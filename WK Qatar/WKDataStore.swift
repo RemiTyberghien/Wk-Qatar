@@ -25,12 +25,15 @@ class  WKDataStore {
             landen = landen.filter{!$0.hasPrefix("1")}
             landen = landen.filter{!$0.hasPrefix("To be announced")}
             return Array(Set(landen)).sorted()
-
     }
 
      func stadiumsZoeken() -> [String] {
          var stadiums = results.map { $0.location }
          stadiums = stadiums.filter{!$0.hasPrefix("TBA")}
-            return Array(Set(stadiums)).sorted()
-        }
+         return Array(Set(stadiums)).sorted()
+     }
+
+     func wedstrijden(inStadium stadium: String) -> [WKResult] {
+             results.filter { $0.location == stadium }
+     }
 }

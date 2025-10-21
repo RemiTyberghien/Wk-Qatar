@@ -20,14 +20,10 @@ struct StadiumView: View {
         }content: {
             MatchesView(land: $land, geselecteerdStadion: $geselecteerdStadion)
         } detail : {
-            DetailMatchesView()
+            DetailMatchesView(land: $land, geselecteerdStadion: $geselecteerdStadion)
         }.navigationTitle("Stadions")
 
-        
-        
-    
-
-
+     }
     }
 }
 
