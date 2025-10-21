@@ -18,8 +18,10 @@ class  WKDataStore {
         result = load("WKResultsQatar.json")
     }
     
-    func landenZoeken() -> [String]
+    func getLanden() -> [String]
     {
-        result.homeTeam
+        var landen : [String]
+        
+        for( )
     }
 }
