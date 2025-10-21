@@ -12,16 +12,25 @@ import Foundation
 class  WKDataStore {
     
     
-    var result : [WKResult]
+    var results : [WKResult]
     
     init(){
-        result = load("WKResultsQatar.json")
+        results = load("WKResultsQatar.json")
     }
     
-    func getLanden() -> [String]
-    {
-        var landen : [String]
-        
-        for( )
+
+
+    func landenZoeken() -> [String] {
+            var landen = results.map { $0.homeTeam }
+            landen = landen.filter{!$0.hasPrefix("1")}
+            landen = landen.filter{!$0.hasPrefix("To be announced")}
+            return Array(Set(landen)).sorted()
+
     }
+
+     func stadiumsZoeken() -> [String] {
+         var stadiums = results.map { $0.location }
+         stadiums = stadiums.filter{!$0.hasPrefix("TBA")}
+            return Array(Set(stadiums)).sorted()
+        }
 }
